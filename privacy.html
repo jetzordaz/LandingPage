@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Energy Savings Program</title>
+    <meta name="description" content="Privacy policy for the Energy Savings Program website." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">California Home Energy Support</p>
+        <h1 class="brand-title">Energy Savings Program</h1>
+      </div>
+      <a class="language-toggle" href="index.html">Back to site</a>
+    </header>
+
+    <main class="privacy-policy">
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Privacy</p>
+          <h2>Privacy Policy</h2>
+          <p>Last updated: September 1, 2026</p>
+          <button class="language-toggle policy-language-toggle" type="button" id="policyLanguageButton">Espanol</button>
+        </div>
+
+        <article class="policy-copy" id="englishPolicy">
+          <h2>What We Collect</h2>
+          <p>When you submit the eligibility form, we collect your name, phone number, ZIP code, homeowner status, and your consent to be contacted.</p>
+
+          <h2>How We Use Your Information</h2>
+          <p>We use this information to respond to your request, discuss potential energy-saving programs, confirm service availability in your area, and provide follow-up by phone or text when you have consented.</p>
+
+          <h2>How We Share Information</h2>
+          <p>We do not sell personal information collected through this form. We may share information only with service providers that help us respond to your request or operate this website, and only for those purposes.</p>
+
+          <h2>Data Retention and Security</h2>
+          <p>We keep lead information only as long as reasonably needed for the purposes described above or as required by law. No internet transmission or storage system is completely secure, but we use reasonable safeguards appropriate to the information we collect.</p>
+
+          <h2>Your Choices</h2>
+          <p>You may ask us to update or delete your information, or ask us to stop contacting you. To opt out of text messages, reply STOP to a message. Consent to contact is not a condition of purchasing goods or services.</p>
+
+          <h2>California Privacy Notice</h2>
+          <p>California residents may have privacy rights under applicable law, including the right to request information about personal information collected about them, request deletion or correction, and opt out of certain sharing. This site does not sell personal information collected through its lead form.</p>
+
+          <h2>Contact Us</h2>
+          <p>For privacy questions or requests, contact us at <strong>[ADD YOUR BUSINESS EMAIL BEFORE LAUNCH]</strong>.</p>
+        </article>
+
+        <article class="policy-copy" id="spanishPolicy" hidden lang="es">
+          <h2>Que Informacion Recopilamos</h2>
+          <p>Cuando envias el formulario de elegibilidad, recopilamos tu nombre, numero de telefono, codigo postal, estado de propietario y consentimiento para contactarte.</p>
+
+          <h2>Como Usamos Tu Informacion</h2>
+          <p>Usamos esta informacion para responder a tu solicitud, hablar sobre posibles programas de ahorro de energia, confirmar disponibilidad de servicios en tu area y dar seguimiento por telefono o mensaje de texto cuando hayas dado consentimiento.</p>
+
+          <h2>Como Compartimos la Informacion</h2>
+          <p>No vendemos la informacion personal recopilada mediante este formulario. Podemos compartir informacion solo con proveedores de servicios que nos ayudan a responder a tu solicitud u operar este sitio web, y solo para esos fines.</p>
+
+          <h2>Conservacion y Seguridad</h2>
+          <p>Conservamos la informacion de los prospectos solo durante el tiempo razonablemente necesario para los fines descritos o segun lo exija la ley. Ningun sistema de transmision o almacenamiento por internet es completamente seguro, pero usamos medidas razonables de proteccion.</p>
+
+          <h2>Tus Opciones</h2>
+          <p>Puedes pedirnos que actualicemos o eliminemos tu informacion, o que dejemos de contactarte. Para dejar de recibir mensajes de texto, responde STOP a un mensaje. El consentimiento para ser contactado no es una condicion para comprar bienes o servicios.</p>
+
+          <h2>Aviso de Privacidad de California</h2>
+          <p>Los residentes de California pueden tener derechos de privacidad conforme a la ley aplicable, incluido el derecho de solicitar informacion sobre los datos recopilados, pedir eliminacion o correccion y excluirse de ciertos tipos de intercambio. Este sitio no vende la informacion personal recopilada en el formulario.</p>
+
+          <h2>Contactanos</h2>
+          <p>Para preguntas o solicitudes de privacidad, contactanos en <strong>[AGREGA TU CORREO COMERCIAL ANTES DEL LANZAMIENTO]</strong>.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Not all homeowners qualify. Programs vary by location and electricity usage.</p>
+    </footer>
+
+    <script>
+      const button = document.getElementById("policyLanguageButton");
+      const englishPolicy = document.getElementById("englishPolicy");
+      const spanishPolicy = document.getElementById("spanishPolicy");
+      let isSpanish = false;
+
+      button.addEventListener("click", () => {
+        isSpanish = !isSpanish;
+        englishPolicy.hidden = isSpanish;
+        spanishPolicy.hidden = !isSpanish;
+        document.documentElement.lang = isSpanish ? "es" : "en";
+        button.textContent = isSpanish ? "English" : "Espanol";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Energy Savings Program</title>
+    <meta
+      name="description"
+      content="Find out if your California home may qualify for energy savings programs that can lower your bill and help protect against outages."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow" id="navTag">California Home Energy Support</p>
+        <h1 class="brand-title">Energy Savings Program</h1>
+      </div>
+      <button class="language-toggle" type="button" onclick="toggleLanguage()" id="langButton">
+        Espanol
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" id="heroTag">For California homeowners</p>
+          <h2 id="headline">Stop Overpaying for Energy in California</h2>
+          <p id="subtext">
+            See if you qualify for programs that can save you money and help
+            protect your home during outages.
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#qualify" id="ctaText">Check If We Can Help You</a>
+            <p class="microcopy" id="heroNote">
+              No pressure. Just a quick eligibility check based on your home and usage.
+            </p>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <p class="card-label" id="cardLabel">Why homeowners reach out</p>
+          <ul class="stat-list">
+            <li>
+              <strong id="statOneNumber">Rising bills</strong>
+              <span id="statOneText">Many households are seeing utility costs climb year after year.</span>
+            </li>
+            <li>
+              <strong id="statTwoNumber">Grid stress</strong>
+              <span id="statTwoText">Blackouts and shutoffs can disrupt comfort, work, and safety.</span>
+            </li>
+            <li>
+              <strong id="statThreeNumber">Less control</strong>
+              <span id="statThreeText">Homeowners want more predictability and less dependence on rate hikes.</span>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow" id="switchTag">Why homeowners are switching</p>
+          <h2 id="switchTitle">Why Homeowners Are Switching</h2>
+        </div>
+        <ul class="reasons-list">
+          <li id="reasonOne">Rising PG&amp;E electricity rates every year</li>
+          <li id="reasonTwo">Frequent blackouts across California</li>
+          <li id="reasonThree">No control over your monthly bill</li>
+        </ul>
+      </section>
+
+      <section class="section visual-section">
+        <div class="section-heading">
+          <p class="eyebrow" id="visualTag">What people are seeing</p>
+          <h2 id="visualTitle">The pressure is visible across the grid.</h2>
+          <p id="visualIntro">
+            Higher demand, outage anxiety, and AI infrastructure growth are making
+            energy feel like a daily concern instead of a background utility.
+          </p>
+        </div>
+
+        <div class="visual-grid">
+          <article class="visual-card">
+            <div class="visual-art visual-art-blackout" aria-hidden="true">
+              <svg viewBox="0 0 320 220" role="presentation">
+                <rect x="10" y="18" width="300" height="184" rx="24" />
+                <circle cx="258" cy="62" r="18" class="glow-orb" />
+                <path d="M60 170 L100 116 L140 170 Z" class="mountain-shape" />
+                <path d="M115 170 L170 95 L230 170 Z" class="mountain-shape-alt" />
+                <rect x="35" y="136" width="22" height="34" rx="4" class="pole-block" />
+                <rect x="260" y="126" width="22" height="44" rx="4" class="pole-block" />
+                <path d="M46 144 C95 120 128 118 176 132 S245 140 271 130" class="power-line" />
+                <path d="M199 72 L178 114 H204 L176 162" class="bolt-shape" />
+              </svg>
+            </div>
+            <p class="visual-label" id="visualOneLabel">Outages and blackouts</p>
+            <p class="visual-text" id="visualOneText">
+              More homeowners are looking for backup, predictability, and less exposure
+              to disruptions.
+            </p>
+          </article>
+
+          <article class="visual-card">
+            <div class="visual-art visual-art-grid" aria-hidden="true">
+              <svg viewBox="0 0 320 220" role="presentation">
+                <rect x="10" y="18" width="300" height="184" rx="24" />
+                <path d="M50 170 H270" class="ground-line" />
+                <path d="M88 170 L112 72 L136 170" class="tower-legs" />
+                <path d="M184 170 L208 58 L232 170" class="tower-legs" />
+                <path d="M100 92 H124 M94 115 H130 M90 140 H134" class="tower-bars" />
+                <path d="M196 82 H220 M190 108 H226 M186 136 H230" class="tower-bars" />
+                <path d="M123 92 C150 72 176 70 196 82" class="wire-curve" />
+                <path d="M130 115 C156 103 180 100 190 108" class="wire-curve" />
+                <path d="M134 140 C158 132 181 130 186 136" class="wire-curve" />
+                <circle cx="63" cy="66" r="14" class="sun-disc" />
+              </svg>
+            </div>
+            <p class="visual-label" id="visualTwoLabel">Grid pressure</p>
+            <p class="visual-text" id="visualTwoText">
+              California households are paying closer attention to where reliability and rates are heading.
+            </p>
+          </article>
+
+          <article class="visual-card">
+            <div class="visual-art visual-art-ai" aria-hidden="true">
+              <svg viewBox="0 0 320 220" role="presentation">
+                <rect x="10" y="18" width="300" height="184" rx="24" />
+                <rect x="56" y="64" width="92" height="92" rx="18" class="chip-core" />
+                <rect x="172" y="54" width="92" height="112" rx="18" class="server-stack" />
+                <path d="M148 92 H172" class="data-link" />
+                <path d="M148 126 H172" class="data-link" />
+                <path d="M84 48 V30 M112 48 V30 M84 190 V172 M112 190 V172" class="pin-line" />
+                <path d="M40 84 H22 M40 112 H22 M282 84 H298 M282 112 H298" class="pin-line" />
+                <circle cx="220" cy="84" r="8" class="status-dot" />
+                <circle cx="220" cy="111" r="8" class="status-dot" />
+                <circle cx="220" cy="138" r="8" class="status-dot" />
+                <path d="M228 28 C252 38 272 58 280 84" class="signal-arc" />
+              </svg>
+            </div>
+            <p class="visual-label" id="visualThreeLabel">AI and data center growth</p>
+            <p class="visual-text" id="visualThreeText">
+              New computing demand is becoming part of the energy conversation, especially in Central California.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section articles">
+        <div class="section-heading">
+          <p class="eyebrow" id="articleTag">Energy updates</p>
+          <h2 id="articleTitle">What's Happening Right Now</h2>
+          <p id="articleIntro">
+            Homeowners are paying closer attention because rate pressure, grid reliability,
+            and backup planning are becoming harder to ignore.
+          </p>
+        </div>
+
+        <div class="article-grid">
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleOneSource">American Experiment</span>
+              <span id="articleOneDate">DOE warning</span>
+            </div>
+            <h3 id="articleOneTitle">DOE Warning: AI Demand Could Raise Outage Risk</h3>
+            <p id="articleOneText">
+              New warnings point to AI-driven electricity demand as one factor that could
+              put much more pressure on the power grid in the years ahead.
+            </p>
+            <a
+              href="https://www.americanexperiment.org/risk-of-power-outages-increase-100x-by-2030-warns-doe/"
+              id="articleOneLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleTwoSource">California Energy Commission</span>
+              <span id="articleTwoDate">SB 100</span>
+            </div>
+            <h3 id="articleTwoTitle">California's 2045 Renewable Energy Goal</h3>
+            <p id="articleTwoText">
+              California policy is pushing the state toward 100% clean retail electricity
+              by 2045, shaping how homeowners think about future energy choices.
+            </p>
+            <a
+              href="https://www.energy.ca.gov/sb100"
+              id="articleTwoLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleThreeSource">Environmental Research Letters</span>
+              <span id="articleThreeDate">Data center demand</span>
+            </div>
+            <h3 id="articleThreeTitle">Data Centers Are Driving More Energy Demand</h3>
+            <p id="articleThreeText">
+              Research on data center growth highlights how digital infrastructure can add
+              meaningful strain to regional electricity demand.
+            </p>
+            <a
+              href="https://iopscience.iop.org/article/10.1088/1748-9326/ABFBA1"
+              id="articleThreeLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleFourSource">GV Wire</span>
+              <span id="articleFourDate">Fresno area</span>
+            </div>
+            <h3 id="articleFourTitle">Fresno Is Emerging as an AI Data Center Hotspot</h3>
+            <p id="articleFourText">
+              Reporting on PG&amp;E activity suggests the Fresno area is seeing rising interest
+              from AI-related data center projects and the energy demand that comes with them.
+            </p>
+            <a
+              href="https://gvwire.com/2025/05/27/pge-sees-surge-in-ai-data-center-interest-with-fresno-area-emerging-as-new-hotspot/"
+              id="articleFourLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleFiveSource">Fortune</span>
+              <span id="articleFiveDate">May 12, 2026</span>
+            </div>
+            <h3 id="articleFiveTitle">Lake Tahoe Residents Face a New Power Source Fight</h3>
+            <p id="articleFiveText">
+              Fortune reports that nearly 50,000 Lake Tahoe residents may need a new
+              energy source as utility capacity is redirected toward data center demand.
+            </p>
+            <a
+              href="https://fortune.com/2026/05/12/lake-tahoe-data-center-49000-residents-power-source/"
+              id="articleFiveLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleSixSource">U.S. Department of Energy</span>
+              <span id="articleSixDate">July 2026</span>
+            </div>
+            <h3 id="articleSixTitle">Federal Officials Take Emergency Action to Reduce Blackout Risk Across 17 States</h3>
+            <p id="articleSixText">
+              In July 2026, the U.S. Department of Energy issued an emergency order covering 17 states as extreme heat increased pressure on the electric grid. The order authorized additional generation and backup resources to help maintain reliability and reduce the risk of power outages.
+            </p>
+            <a
+              href="https://www.energy.gov/articles/energy-secretary-secures-grid-across-17-states-amid-period-hot-weather"
+              id="articleSixLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleSevenSource">Los Angeles Times</span>
+              <span id="articleSevenDate">August 29, 2026</span>
+            </div>
+            <h3 id="articleSevenTitle">California Moves to Protect Consumers as Data Centers Demand More Electricity</h3>
+            <p id="articleSevenText">
+              California lawmakers reached an agreement aimed at regulating the growing electricity demands of data centers amid concerns that new facilities could require costly grid upgrades and contribute to higher electricity costs for consumers.
+            </p>
+            <a
+              href="https://www.latimes.com/california/story/2026-08-29/california-lawmakers-reach-deal-in-high-stakes-fight-over-regulating-data-centers"
+              id="articleSevenLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+
+          <article class="article">
+            <div class="article-meta">
+              <span id="articleEightSource">Los Angeles Times</span>
+              <span id="articleEightDate">August 6, 2026</span>
+            </div>
+            <h3 id="articleEightTitle">AI's Growing Electricity Demand Is Creating New Challenges for America's Grid</h3>
+            <p id="articleEightText">
+              AI data centers can require enormous amounts of electricity and experience rapid changes in power demand. Energy experts are studying how these new loads could affect grid stability and reliability as AI infrastructure continues expanding.
+            </p>
+            <a
+              href="https://www.latimes.com/business/story/2026-08-06/ai-power-surge-is-frying-its-own-data-centers-rattling-grid"
+              id="articleEightLink"
+              target="_blank"
+              rel="noreferrer"
+              >Read the article</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="section subsidies" aria-labelledby="subsidyTitle">
+        <div class="section-heading">
+          <p class="eyebrow" id="subsidyTag">More ways to save</p>
+          <h2 id="subsidyTitle">You May Also Qualify</h2>
+          <p id="subsidyIntro">
+            Depending on your household and available programs, you may be eligible for
+            subsidies that help with other energy-efficient home upgrades.
+          </p>
+        </div>
+
+        <div class="subsidy-grid">
+          <article class="subsidy-card">
+            <span class="subsidy-icon" aria-hidden="true">AC</span>
+            <h3 id="subsidyAcTitle">AC Equipment</h3>
+            <p id="subsidyAcText">Support may be available for qualifying heating and cooling equipment.</p>
+          </article>
+          <article class="subsidy-card">
+            <span class="subsidy-icon" aria-hidden="true">FR</span>
+            <h3 id="subsidyFridgeTitle">Refrigerators</h3>
+            <p id="subsidyFridgeText">Programs may help with eligible energy-efficient refrigerator upgrades.</p>
+          </article>
+          <article class="subsidy-card">
+            <span class="subsidy-icon" aria-hidden="true">OV</span>
+            <h3 id="subsidyOvenTitle">Ovens</h3>
+            <p id="subsidyOvenText">Qualifying households may receive help toward approved oven upgrades.</p>
+          </article>
+          <article class="subsidy-card">
+            <span class="subsidy-icon" aria-hidden="true">DW</span>
+            <h3 id="subsidyDishwasherTitle">Dishwashers</h3>
+            <p id="subsidyDishwasherText">Assistance may be available for eligible high-efficiency dishwashers.</p>
+          </article>
+          <article class="subsidy-card">
+            <span class="subsidy-icon" aria-hidden="true">RF</span>
+            <h3 id="subsidyRoofTitle">Roof Improvements</h3>
+            <p id="subsidyRoofText">Some programs may help cover qualifying improvements to your roof.</p>
+          </article>
+        </div>
+
+        <p class="subsidy-disclaimer" id="subsidyDisclaimer">
+          Eligibility, program availability, and benefit amounts vary by household, location, and program requirements.
+        </p>
+      </section>
+
+      <section class="section testimonials">
+        <div class="section-heading">
+          <p class="eyebrow" id="testimonialTag">Homeowner stories</p>
+          <h2 id="testimonialTitle">People want proof that this actually helps.</h2>
+          <p id="testimonialIntro">
+            These stories show the kind of concerns homeowners bring in and the
+            confidence they want before making a change.
+          </p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-hidden="true" id="testimonialOneStars">5-star review</div>
+            <p class="testimonial-quote" id="testimonialOneQuote">
+              "Our bill kept jumping and we felt like we had zero control. The
+              process was simple, and we finally understood what options were available
+              for our home."
+            </p>
+            <div class="testimonial-footer">
+              <strong id="testimonialOneName">Angela R., Fresno</strong>
+              <span id="testimonialOneResult">Wanted lower monthly energy costs</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-hidden="true" id="testimonialTwoStars">5-star review</div>
+            <p class="testimonial-quote" id="testimonialTwoQuote">
+              "After dealing with outage concerns every summer, we wanted more peace
+              of mind. It helped to talk through what programs and protections might fit."
+            </p>
+            <div class="testimonial-footer">
+              <strong id="testimonialTwoName">Marcus T., Sacramento</strong>
+              <span id="testimonialTwoResult">Focused on backup and outage readiness</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-hidden="true" id="testimonialThreeStars">5-star review</div>
+            <p class="testimonial-quote" id="testimonialThreeQuote">
+              "We had been putting it off because everything sounded confusing. This
+              made the next step feel clear and much less overwhelming."
+            </p>
+            <div class="testimonial-footer">
+              <strong id="testimonialThreeName">Elena M., Bakersfield</strong>
+              <span id="testimonialThreeResult">Needed a clearer path to qualify</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-hidden="true" id="testimonialFourStars">5-star review</div>
+            <p class="testimonial-quote" id="testimonialFourQuote">
+              "I was having a terrible experience at first paying for a true-up bill of about $1,000. I applied for the program
+              and qualified for the batteries and $300 in subsidies for my new fridge. Now I am satisfied and protected from outages"
+            </p>
+            <div class="testimonial-footer">
+              <strong id="testimonialFourName">Juan Vasquez, Selma</strong>
+              <span id="testimonialFourResult">Qualified for batteries and subsidies</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section form-section" id="qualify">
+        <div class="section-heading">
+          <p class="eyebrow" id="formTag">Next step</p>
+          <h2 id="formTitle">Check If You Qualify</h2>
+          <p id="formText">
+            Share a few details and we'll help determine whether your home may
+            qualify for available savings programs.
+          </p>
+        </div>
+
+        <form class="lead-form">
+          <input type="text" placeholder="Full Name" aria-label="Full Name" id="fullName" required />
+          <input type="tel" placeholder="Phone Number" aria-label="Phone Number" id="phoneNumber" required />
+          <input type="text" placeholder="Zip Code" aria-label="Zip Code" id="zipCode" required />
+          <select id="homeownerStatus" aria-label="Are you the homeowner?" required>
+            <option value="" disabled selected id="homeownerPlaceholder">Are you the homeowner?</option>
+            <option value="yes" id="homeownerYes">Yes, I own my home</option>
+            <option value="no" id="homeownerNo">No</option>
+          </select>
+          <label class="consent-row">
+            <input type="checkbox" id="contactConsent" required />
+            <span class="consent-copy"><span id="consentText">I agree to be contacted by phone or text about my request. Consent is not a condition of purchase.</span> <a href="privacy.html" id="privacyLink">Privacy Policy</a></span>
+          </label>
+          <button type="submit" id="submitText">Submit Information</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p id="footerText">
+        Not all homeowners qualify. Programs vary by location and electricity usage.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
