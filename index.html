@@ -432,10 +432,10 @@
           </p>
         </div>
 
-        <form class="lead-form">
-          <input type="text" placeholder="Full Name" aria-label="Full Name" id="fullName" required />
-          <input type="tel" placeholder="Phone Number" aria-label="Phone Number" id="phoneNumber" required />
-          <input type="text" placeholder="Zip Code" aria-label="Zip Code" id="zipCode" required />
+        <form class="lead-form" id="leadForm">
+          <input type="text" name="fullName" placeholder="Full Name" aria-label="Full Name" id="fullName" autocomplete="name" maxlength="100" required />
+          <input type="tel" name="phoneNumber" placeholder="Phone Number" aria-label="Phone Number" id="phoneNumber" autocomplete="tel" maxlength="30" required />
+          <input type="text" name="zipCode" placeholder="Zip Code" aria-label="Zip Code" id="zipCode" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10" required />
           <select id="homeownerStatus" aria-label="Are you the homeowner?" required>
             <option value="" disabled selected id="homeownerPlaceholder">Are you the homeowner?</option>
             <option value="yes" id="homeownerYes">Yes, I own my home</option>
@@ -445,7 +445,12 @@
             <input type="checkbox" id="contactConsent" required />
             <span class="consent-copy"><span id="consentText">I agree to be contacted by phone or text about my request. Consent is not a condition of purchase.</span> <a href="privacy.html" id="privacyLink">Privacy Policy</a></span>
           </label>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Leave this field blank</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
           <button type="submit" id="submitText">Submit Information</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>

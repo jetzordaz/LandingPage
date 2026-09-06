@@ -1,5 +1,8 @@
 let isSpanish = false;
 
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby3Nziq7O8qree3vbtas0Ti6ZPM8p6U3yj-g6khk68c_NbCSHTs-5j-UiupPXC8iUt13w/exec";
+
 const copy = {
   en: {
     pageTitle: "Energy Savings Program",
@@ -139,6 +142,10 @@ const copy = {
     homeownerNo: "No",
     consentText: "I agree to be contacted by phone or text about my request. Consent is not a condition of purchase.",
     privacyLink: "Privacy Policy",
+    formSending: "Sending...",
+    formSuccess: "Thank you. Your information was received.",
+    formError: "We could not send your information. Please try again.",
+    formConfigError: "The form is not connected yet. Please check back soon.",
     footerText:
       "Not all homeowners qualify. Programs vary by location and electricity usage.",
     langButton: "Espanol",
@@ -282,6 +289,10 @@ const copy = {
     homeownerNo: "No",
     consentText: "Acepto que me contacten por telefono o mensaje de texto sobre mi solicitud. El consentimiento no es una condicion de compra.",
     privacyLink: "Politica de privacidad",
+    formSending: "Enviando...",
+    formSuccess: "Gracias. Recibimos tu informacion.",
+    formError: "No pudimos enviar tu informacion. Intentalo de nuevo.",
+    formConfigError: "El formulario aun no esta conectado. Vuelve a intentarlo pronto.",
     footerText:
       "No todos los propietarios califican. Los programas varian segun la ubicacion y el consumo electrico.",
     langButton: "English",
@@ -322,24 +333,57 @@ function toggleLanguage() {
   applyCopy(isSpanish ? "es" : "en");
 }
 
-const leadForm = document.querySelector(".lead-form");
+const leadForm = document.getElementById("leadForm");
+const formStatus = document.getElementById("formStatus");
 
-leadForm?.addEventListener("submit", (event) => {
+leadForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const submitButton = leadForm.querySelector("button");
-  if (!submitButton) {
+  if (!submitButton || !formStatus) {
     return;
   }
 
-  const original = submitButton.textContent;
-  submitButton.textContent = isSpanish ? "Recibido" : "Received";
+  const selectedCopy = copy[isSpanish ? "es" : "en"];
+  formStatus.className = "form-status";
+
+  if (!GOOGLE_SCRIPT_URL.startsWith("https://script.google.com/macros/s/")) {
+    formStatus.textContent = selectedCopy.formConfigError;
+    formStatus.classList.add("is-error");
+    return;
+  }
+
+  submitButton.textContent = selectedCopy.formSending;
   submitButton.disabled = true;
 
-  window.setTimeout(() => {
+  const payload = new URLSearchParams({
+    fullName: document.getElementById("fullName").value.trim(),
+    phoneNumber: document.getElementById("phoneNumber").value.trim(),
+    zipCode: document.getElementById("zipCode").value.trim(),
+    homeownerStatus: document.getElementById("homeownerStatus").value,
+    contactConsent: document.getElementById("contactConsent").checked ? "true" : "false",
+    website: document.getElementById("website").value,
+    language: isSpanish ? "Spanish" : "English",
+    pageUrl: window.location.href,
+    referrer: document.referrer || "Direct"
+  });
+
+  try {
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: payload
+    });
+
     leadForm.reset();
-    submitButton.textContent = original;
+    formStatus.textContent = selectedCopy.formSuccess;
+    formStatus.classList.add("is-success");
+  } catch (error) {
+    formStatus.textContent = selectedCopy.formError;
+    formStatus.classList.add("is-error");
+  } finally {
+    submitButton.textContent = copy[isSpanish ? "es" : "en"].submitText;
     submitButton.disabled = false;
-  }, 1800);
+  }
 });
 
 applyCopy("en");

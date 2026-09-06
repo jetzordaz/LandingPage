@@ -584,6 +584,30 @@ footer {
   accent-color: var(--accent);
   flex: 0 0 auto;
 }
+
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.form-status.is-success {
+  color: var(--accent);
+}
+
+.form-status.is-error {
+  color: #fca5a5;
+}
 footer {
   padding: 0 0 2rem;
   color: #9db0c9;
