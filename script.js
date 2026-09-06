@@ -1,7 +1,7 @@
 let isSpanish = false;
 
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby3Nziq7O8qree3vbtas0Ti6ZPM8p6U3yj-g6khk68c_NbCSHTs-5j-UiupPXC8iUt13w/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwpEmVkbXbkEgEn8we0jw4ifeV8d4G28w8eVJqMAfwIs3085og-NsPCG_OndERPmQkGOw/exec";
 
 const copy = {
   en: {
