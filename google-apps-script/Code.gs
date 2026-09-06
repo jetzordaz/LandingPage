@@ -1,4 +1,5 @@
 const SHEET_NAME = 'Leads';
+const SPREADSHEET_ID = 'PASTE_YOUR_SPREADSHEET_ID_HERE';
 const HEADERS = [
   'Submitted At',
   'Full Name',
@@ -27,7 +28,11 @@ function doPost(e) {
 
     lock.waitLock(10000);
 
-    const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    if (SPREADSHEET_ID === 'PASTE_YOUR_SPREADSHEET_ID_HERE') {
+      throw new Error('Add your Google Spreadsheet ID before deploying.');
+    }
+
+    const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
     let sheet = spreadsheet.getSheetByName(SHEET_NAME);
 
     if (!sheet) {
