@@ -108,18 +108,20 @@ const copy = {
     testimonialIntro:
       "These stories show the kind of concerns homeowners bring in and the confidence they want before making a change.",
     testimonialOneQuote:
-      "\"Our bill kept jumping and we felt like we had zero control. The process was simple, and we finally understood what options were available for our home.\"",
-    testimonialOneName: "Angela R., Fresno",
+      "\"Our bill kept jumping and we felt like we had zero control. The process was simple, and we finally understood what options were available for our home. Jetzael explained the program and walked us through the process, once we finally understood what options were available for our home. We qualified for the batteries and subsidies, which helped lower our monthly energy costs and  replace our old roof.\"",
+    testimonialOneName: "Angela R, Fresno",
     testimonialOneResult: "Wanted lower monthly energy costs",
     testimonialTwoQuote:
-      "\"After dealing with outage concerns every summer, we wanted more peace of mind. It helped to talk through what programs and protections might fit.\"",
-    testimonialTwoName: "Marcus T., Sacramento",
-    testimonialTwoResult: "Focused on backup and outage readiness",
+      "\"We had been putting it off because everything sounded confusing. Greg came by and explained everything so clearly. We qualified for the batteries and subsidies, which eliminated our $1400 true-up bill and gave us peace of mind.\"",
+    testimonialTwoName: "Trisha C, Selma",
+    testimonialTwoResult: "Experienced a stressful true-up bill",
     testimonialThreeQuote:
-      "\"We had been putting it off because everything sounded confusing. This made the next step feel clear and much less overwhelming.\"",
-    testimonialThreeName: "Elena M., Bakersfield",
+      "\"So many people had been coming to our door trying to sell us something. When Jetzael and Greg came by, they made it simple and explained the whole process. We used to pay an $800 electricty bill we qualified for the program,now we are paying $300 and protected from outages\"",
+    testimonialThreeName: "Elena M, Bakersfield",
     testimonialThreeResult: "Needed a clearer path to qualify",
-    testimonialFourName: "Juan Vasquez, Selma",
+    testimonialFourQuote:
+      "\"I initially had a bad experience paying a true-up bill of around $1,000. I signed up for the program and qualified for the batteries and $300 in subsidies for my new fridge. Now I am satisfied and protected from outages\"",
+    testimonialFourName: "Juan V, Selma",
     testimonialFourResult: "Qualified for batteries and subsidies",
     formTag: "Next step",
     formTitle: "Check If You Qualify",
@@ -246,20 +248,20 @@ const copy = {
     testimonialIntro:
       "Estas historias reflejan las preocupaciones reales de propietarios que buscaban mas claridad y tranquilidad.",
     testimonialOneQuote:
-      "\"Nuestra factura seguia subiendo y sentiamos que no teniamos control. El proceso fue sencillo y por fin entendimos que opciones habia para nuestro hogar.\"",
-    testimonialOneName: "Angela R., Fresno",
+      "\"Nuestra factura seguia subiendo y sentiamos que no teniamos control. El proceso fue sencillo y por fin entendimos que opciones habia para nuestro hogar. Jetzael explicó el programa y nos guió a través del proceso, una vez que finalmente entendimos qué opciones estaban disponibles para nuestro hogar. Nosotros calificamos para las baterías y subsidios, lo que ayudó a reducir nuestros costos mensuales de energía y reemplazó nuestro viejo techo.\"",
+    testimonialOneName: "Angela R, Fresno",
     testimonialOneResult: "Queria bajar sus costos mensuales",
     testimonialTwoQuote:
-      "\"Despues de preocuparnos por los apagones cada verano, buscabamos mas tranquilidad. Fue util entender que programas y protecciones podrian aplicar.\"",
-    testimonialTwoName: "Marcus T., Sacramento",
-    testimonialTwoResult: "Buscaba prepararse mejor para apagones",
+      "\"Lo habiamos pospuesto porque todo parecia confuso. Greg vino a mi casa y explico todo de manera clara. Qualificamos para las baterias y subsidios, lo que eliminó nuestro cargo de $1400 y nos dio tranquilidad.\"",
+    testimonialTwoName: "Trisha C, Selma",
+    testimonialTwoResult: "Experimentamos una factura de ajuste estresante",
     testimonialThreeQuote:
-      "\"Lo habiamos pospuesto porque todo parecia confuso. Esto hizo que el siguiente paso se sintiera mucho mas claro y manejable.\"",
-    testimonialThreeName: "Elena M., Bakersfield",
+      "\"Mucha gente ha venido a nuestra puerta tratando de vendernos algo. Cuando llegaron Jetzael y Greg, hicieron todo simple y nos explicaron el proceso completo. Nosotros pagamos $800 de electricidad y ahora pagamos $300 y estamos protegidos contra apagones\"",
+    testimonialThreeName: "Elena M, Bakersfield",
     testimonialThreeResult: "Necesitaba una ruta mas clara para calificar",
     testimonialFourQuote:
       "\"Al principio tenia una mala experiencia pagando una factura de ajuste de alrededor de $1,000. Me inscrebi en el programa y califique para las baterias y $300 en subsidios para mi nueva refrigeradora. Ahora estoy satisfecho y protegido contra apagones\"",
-    testimonialFourName: "Juan Vasquez, Selma",
+    testimonialFourName: "Juan V, Selma",
     testimonialFourResult: "Califico para baterias y subsidios",
     formTag: "Siguiente paso",
     formTitle: "Consulta Si Calificas",
