@@ -482,6 +482,51 @@ footer {
   font-size: 0.95rem;
 }
 
+.qualification-notice {
+  padding-top: 0;
+}
+
+.qualification-notice-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 28px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(245, 158, 11, 0.16), transparent 55%),
+    linear-gradient(180deg, rgba(19, 35, 61, 0.96), rgba(11, 19, 34, 0.98));
+  box-shadow: var(--shadow);
+}
+
+.qualification-notice-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--warning);
+  content: "";
+}
+
+.qualification-notice-card .eyebrow {
+  color: var(--warning);
+}
+
+.qualification-notice-card h2 {
+  max-width: 52rem;
+  margin: 0 auto;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.qualification-notice-card p:last-child {
+  max-width: 42rem;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
 .form-section {
   padding-bottom: 5rem;
 }

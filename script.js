@@ -123,6 +123,9 @@ const copy = {
       "\"I initially had a bad experience paying a true-up bill of around $1,000. I signed up for the program and qualified for the batteries and $300 in subsidies for my new fridge. Now I am satisfied and protected from outages\"",
     testimonialFourName: "Juan V, Selma",
     testimonialFourResult: "Qualified for batteries and subsidies",
+    qualificationNoticeTag: "Qualification is limited",
+    qualificationNoticeTitle: "Only 1 in 4 Homes Qualify for the Program",
+    qualificationNoticeText: "Qualification is based on the home—not simply on the homeowner.",
     formTag: "Next step",
     formTitle: "Check If You Qualify",
     formText:
@@ -263,6 +266,9 @@ const copy = {
       "\"Al principio tenia una mala experiencia pagando una factura de ajuste de alrededor de $1,000. Me inscrebi en el programa y califique para las baterias y $300 en subsidios para mi nueva refrigeradora. Ahora estoy satisfecho y protegido contra apagones\"",
     testimonialFourName: "Juan V, Selma",
     testimonialFourResult: "Califico para baterias y subsidios",
+    qualificationNoticeTag: "La calificacion es limitada",
+    qualificationNoticeTitle: "Solo 1 de Cada 4 Hogares Califica para el Programa",
+    qualificationNoticeText: "La calificacion se basa en la vivienda, no simplemente en el propietario.",
     formTag: "Siguiente paso",
     formTitle: "Consulta Si Calificas",
     formText:
