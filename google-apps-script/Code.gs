@@ -1,5 +1,5 @@
 const SHEET_NAME = 'Leads';
-const SPREADSHEET_ID = 'PASTE_YOUR_SPREADSHEET_ID_HERE';
+const SPREADSHEET_ID = 'AKfycbwpEmVkbXbkEgEn8we0jw4ifeV8d4G28w8eVJqMAfwIs3085og-NsPCG_OndERPmQkGOw';
 const HEADERS = [
   'Submitted At',
   'Full Name',
@@ -28,7 +28,7 @@ function doPost(e) {
 
     lock.waitLock(10000);
 
-    if (SPREADSHEET_ID === 'PASTE_YOUR_SPREADSHEET_ID_HERE') {
+    if (SPREADSHEET_ID === 'AKfycbwpEmVkbXbkEgEn8we0jw4ifeV8d4G28w8eVJqMAfwIs3085og-NsPCG_OndERPmQkGOw') {
       throw new Error('Add your Google Spreadsheet ID before deploying.');
     }
 
